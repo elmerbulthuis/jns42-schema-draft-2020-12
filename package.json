@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@jns42/jns42-generator": "^0.2.6",
+    "semver": "^7.5.1"
+  }
+}

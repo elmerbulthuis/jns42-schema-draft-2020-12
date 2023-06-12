@@ -1,4 +1,8 @@
 .*
+/node_modules/
+/out/
 
-!.gitignore
-
+!/.gitignore
+!/.editorconfig
+!/.vscode/
+!/.github/
