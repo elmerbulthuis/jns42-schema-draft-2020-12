@@ -1,3 +1,5 @@
+SRC:=https://json-schema.org/draft/2020-12/schema
+
 ifndef PACKAGE_NAME
 override PACKAGE_NAME:=$(notdir $(basename $(PWD)))
 endif
@@ -22,8 +24,8 @@ out/static/version.txt:
 	@mkdir --parents $(@D)
 	echo $(VERSION) > $@
 
-out/%: src/%
-	npx jns42-generator package file://${PWD}/$< \
+out/%:
+	npx jns42-generator package $(SRC) \
 		--package-directory $@ \
 		--package-name $(PACKAGE_NAME) \
 		--package-version $(PACKAGE_VERSION) \
